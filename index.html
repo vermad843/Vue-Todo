@@ -26,6 +26,13 @@
            >
            <button type = "submit" name = "button">Add</button>
        </form>
+        <button
+            @click = "allDone"
+            type = "button"
+            name = "button"   
+             >
+            All Done
+        </button>
        <ul>
            <li v-for = "todo in todos">
                <input type = "checkbox" v-model = "todo.done">
@@ -33,7 +40,8 @@
               <button 
                  @click = "removeTodo(todo)" 
                  type = "button" 
-                 name = "button">Remove
+                 name = "button">
+                 Remove
              </button>
            </li>
        </ul>
