@@ -1,11 +1,16 @@
 const app = new Vue({
     el : '#app',
     data : {
-      title : 'Hello World'  
+      title : 'Hello World' ,
+      newTodo : '' ,
+      todos : []
     },
     methods : {
        addTodo() {
-           console.log('form Submitted')
+         this.todos.push({
+           title : this.newTodo,
+           done : false  
+         });
        }
     }
 });

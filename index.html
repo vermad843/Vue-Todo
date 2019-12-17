@@ -13,6 +13,7 @@
        <form @submit.prevent = "addTodo">
            <label for = "newTodo">New Todo</label>
            <input 
+           v-model = "newTodo"
            type = "text"
            name = "newTodo"
            id = "newTodo"
@@ -20,6 +21,11 @@
            >
            <button type = "submit" name = "button">Add</button>
        </form>
+       <ul>
+           <li v-for = "todo in todos">
+              {{todo.title}}
+           </li>
+       </ul>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="app.js" charset="utf-8"></script>
