@@ -10,7 +10,7 @@
 <body>
     <main id = "app">
        <h3>{{title}}</h3>
-       <form>
+       <form @submit.prevent = "addTodo">
            <label for = "newTodo">New Todo</label>
            <input 
            type = "text"
