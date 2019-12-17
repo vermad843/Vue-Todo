@@ -11,6 +11,7 @@ const app = new Vue({
            title : this.newTodo,
            done : false  
          });
+         this.newTodo = ''
        }
     }
 });
